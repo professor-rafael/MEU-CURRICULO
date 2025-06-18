@@ -1,1 +1,146 @@
+/*. oi =====   ajwhhedhsdjhahjdhjasdESTILOS GERAIS ===== */
+body {
+  font-family: 'Arial', sans-serif;  /* Define a fonte padrão */
+  margin: 0;                         /* Remove margens padrão do navegador */
+  padding: 0;                        /* Remove paddings padrão */
+  background-color: #f5f7fa;         /* Cor de fundo clara padrão */
+  color: #333;                       /* Cor do texto principal */
+  line-height: 1.6;                  /* Espaçamento entre linhas */
+}
 
+/* ===== CABEÇALHO ===== */
+header {
+  background-color: #2c3e50;         /* Cor de fundo azul escuro */
+  color: white;                      /* Cor do texto */
+  padding: 20px;                     /* Espaçamento interno */
+  display: flex;                     /* Ativa flexbox para alinhamento */
+  justify-content: space-between;    /* Espaço entre elementos */
+  align-items: center;               /* Centraliza verticalmente */
+  flex-wrap: wrap;                   /* Permite quebra de linha em telas pequenas */
+}
+
+/* Container do conteúdo do header */
+.header-content {
+  display: flex;                     /* Layout flex para imagem + texto */
+  align-items: center;               /* Alinha itens verticalmente */
+  gap: 20px;                         /* Espaço entre imagem e texto */
+}
+
+/* Estilo da imagem de perfil */
+.profile-img {
+  width: 80px;                      /* Largura fixa */
+  height: 80px;                     /* Altura fixa (igual à largura para formar círculo) */
+  border-radius: 50%;                /* Torna a imagem circular */
+  object-fit: cover;                 /* Garante que a imagem preencha o espaço sem distorcer */
+  border: 3px solid #3498db;         /* Borda azul ao redor da imagem */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Sombra sutil */
+}
+
+/* Container do texto no header */
+.header-text {
+  text-align: left;                  /* Alinhamento à esquerda */
+}
+
+/* ===== BOTÕES ===== */
+button {
+  margin: 5px;                       /* Espaçamento externo */
+  padding: 10px 15px;                /* Espaçamento interno */
+  background-color: #3498db;         /* Cor de fundo azul */
+  color: white;                      /* Cor do texto */
+  border: none;                      /* Remove borda padrão */
+  border-radius: 5px;                /* Cantos arredondados */
+  cursor: pointer;                   /* Muda cursor para pointer */
+  transition: background-color 0.3s; /* Transição suave de cor */
+}
+
+button:hover {
+  background-color: #2980b9;        /* Cor mais escura no hover */
+}
+
+/* ===== SEÇÕES DE CONTEÚDO ===== */
+section {
+  max-width: 800px;                 /* Largura máxima */
+  margin: 20px auto;                /* Centraliza na página */
+  background-color: white;          /* Fundo branco */
+  padding: 20px;                    /* Espaçamento interno */
+  border-radius: 8px;               /* Cantos arredondados */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil */
+}
+
+/* Títulos das seções */
+h2 {
+  color: #2c3e50;                   /* Cor azul escuro */
+  border-bottom: 2px solid #3498db; /* Linha inferior azul */
+  padding-bottom: 5px;              /* Espaço entre texto e linha */
+  margin-bottom: 15px;              /* Margem inferior */
+}
+
+/* Listas */
+ul {
+  padding-left: 20px;               /* Recuo para alinhar marcadores */
+  list-style-type: square;          /* Estilo dos marcadores */
+}
+
+/* ===== RODAPÉ ===== */
+footer {
+  text-align: center;               /* Centraliza texto */
+  padding: 15px;                    /* Espaçamento interno */
+  background-color: #2c3e50;        /* Cor igual ao header */
+  color: white;                     /* Texto branco */
+  margin-top: 30px;                 /* Espaço acima do rodapé */
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 600px) {
+  /* Ajustes para telas pequenas */
+  header {
+    flex-direction: column;         /* Empilha elementos verticalmente */
+    text-align: center;            /* Centraliza texto */
+  }
+  
+  .header-content {
+    flex-direction: column;        /* Empilha imagem e texto */
+    gap: 10px;                     /* Reduz espaço entre elementos */
+    margin-bottom: 15px;           /* Espaço antes dos botões */
+  }
+  
+  section {
+    margin: 10px;                  /* Reduz margens laterais */
+    padding: 15px;                 /* Reduz padding interno */
+  }
+}
+
+/* ===== MODO ESCURO ===== */
+body.dark-mode {
+  background-color: #1e1e1e;       /* Fundo escuro */
+  color: #f5f5f5;                  /* Texto claro */
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+  background-color: #121212;       /* Tom mais escuro para header/footer */
+}
+
+body.dark-mode section {
+  background-color: #2a2a2a;       /* Fundo cinza escuro para seções */
+  color: #f5f5f5;                  /* Texto claro */
+}
+
+body.dark-mode h2 {
+  color: #ffffff;                  /* Texto branco */
+  border-color: #90caf9;           /* Borda azul claro */
+}
+
+body.dark-mode button {
+  background-color: #90caf9;       /* Azul claro */
+  color: #000;                     /* Texto preto */
+}
+
+body.dark-mode button:hover {
+  background-color: #64b5f6;       /* Azul claro mais escuro */
+}
+
+body.dark-mode .profile-img {
+  border-color: #64b5f6;           /* Borda azul no modo escuro */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4); /* Sombra mais visível */
+}
